@@ -31,6 +31,16 @@ from utils.logger import setup_logger
 # Configuração
 app = FastAPI(title="Instaprice API", description="API para análise de notas fiscais", version="1.0.0")
 
+from fastapi.middleware.cors import CORSMiddleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://instaprice-frontend.onrender.com"],  # ou ["*"] para testes
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 # CORS para permitir frontend React
 app.add_middleware(
     CORSMiddleware,
