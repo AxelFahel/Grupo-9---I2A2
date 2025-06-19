@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { TIMEOUTS } from '../config/timeouts'
 
-const API_BASE_URL = 'https://instaprice-sistema-inteligente-de.onrender.com'
+const API_BASE_URL = 'https://instaprice-frontend.onrender.com'
 const apiUrl = import.meta.env.VITE_API_URL;
 
 const api = axios.create({
